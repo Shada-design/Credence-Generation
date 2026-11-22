@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Credence Generation · Siswa Akhir KMI 2026–2027</title>
+<meta name="description" content="Rangkaian kegiatan siswa akhir KMI Daar El-Istiqomah 2026–2027: Credence Generation, جيل الثقة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="stars" aria-hidden="true"></canvas>
+<div class="glow" id="glow"></div>
+<div class="loader" id="loader"><div class="emblem"><i class="orbit o1"></i><i class="orbit o2"></i><img src="assets/logo.png" alt=""></div>
+  <p class="ar" lang="ar" dir="rtl">جِيلُ الثِّقَة</p><h2>Credence Generation</h2><div class="bar"><i></i></div><small>Memuat amanah…</small></div>
+<button class="music" id="music" aria-label="Putar atau jeda musik" title="Musik"><span></span><span></span><span></span><span></span></button>
+<div class="toast" id="toast" role="status"></div>
+
+<header class="nav">
+  <a class="brand" href="#top"><img src="assets/logo.png" alt=""><span>Credence</span></a>
+  <nav>
+    <a href="#falsafah">Falsafah</a>
+    <a href="#kegiatan">Kegiatan</a>
+    <a href="#jadwal">Jadwal</a>
+    <a href="#personalia">Personalia</a>
+  </nav>
+  <div class="leds" id="leds" role="group" aria-label="Warna lampu LED"></div>
+</header>
+<div class="bulbs" id="bulbs" aria-hidden="true"></div>
+
+<main id="top">
+  <section class="hero">
+    <div class="emblem"><i class="orbit o1"></i><i class="orbit o2"></i><img src="assets/logo.png" alt="Lambang Credence Generation"></div>
+    <p class="eyebrow">Siswa Akhir KMI · 2026–2027 M / 1447–1448 H</p>
+    <h1>Credence <em>Generation</em></h1>
+    <p class="ar" lang="ar" dir="rtl">جِيلُ الثِّقَة</p>
+    <p class="lead">Generasi yang menjadikan kepercayaan sebagai fondasi — kuat, amanah, dan berintegritas.</p>
+    <div class="count" id="count" aria-live="polite"></div>
+    <a class="btn" href="#kegiatan">Telusuri Rangkaian Kegiatan</a>
+  </section>
+
+  <section id="falsafah" class="sec">
+    <header class="sh"><span>01</span><h2>Falsafah Angkatan</h2></header>
+    <div class="grid2">
+      <article class="card rv">
+        <h3>Makna Credence</h3>
+        <p><b>Credence</b> berakar dari bahasa Latin <i>credere</i>: mempercayai, mempercayakan, menaruh keyakinan. Dalam bahasa Arab, <b>ثِقَة</b> (<i>tsiqah</i>, dari akar و ث ق) berarti kokoh, kuat, dan dapat dipercaya — gelar tertinggi bagi perawi hadis yang <i>adil</i> dan <i>dhabit</i>.</p>
+        <p>Kepercayaan tidak diperoleh lewat kata-kata, melainkan lewat konsistensi antara ilmu, akhlak, dan perbuatan.</p>
+      </article>
+      <article class="card rv quote">
+        <p class="ar" lang="ar" dir="rtl">إِنَّ خَيْرَ مَنِ ٱسْتَـْٔجَرْتَ ٱلْقَوِىُّ ٱلْأَمِينُ</p>
+        <p>“Sesungguhnya sebaik-baik orang yang engkau ambil bekerja ialah yang kuat lagi dapat dipercaya.”</p>
+        <small>QS. Al-Qashash: 26</small>
+        <hr>
+        <p class="ar sm" lang="ar" dir="rtl">لا إيمانَ لمن لا أمانةَ له، ولا دينَ لمن لا عهدَ له</p>
+        <p>“Tidak ada iman bagi orang yang tidak amanah, dan tidak ada agama bagi orang yang tidak memegang janji.”</p>
+        <small>HR. Ahmad 12567</small>
+      </article>
+    </div>
+    <h3 class="sub">Filosofi Lambang</h3>
+    <div class="car"><button class="nv" id="prev" aria-label="Sebelumnya">‹</button><div class="track" id="lambang"></div><button class="nv" id="next" aria-label="Berikutnya">›</button></div>
+  </section>
+
+  <section id="kegiatan" class="sec">
+    <header class="sh"><span>02</span><h2>Rangkaian Kegiatan</h2></header>
+    <p class="note">Pilih kegiatan untuk membaca penjelasan lengkap dan melihat galerinya.</p>
+    <div class="timeline" id="timeline"></div>
+  </section>
+
+  <section id="jadwal" class="sec">
+    <header class="sh"><span>03</span><h2>Jadwal Kegiatan</h2></header>
+    <div class="jadwal" id="jadwal-list"></div>
+  </section>
+
+  <section id="personalia" class="sec">
+    <header class="sh"><span>04</span><h2>Personalia</h2></header>
+    <div class="tabs" id="tabs"></div>
+    <div class="people" id="people"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <img src="assets/logo.png" alt="">
+  <p>Credence Generation · Pondok Pesantren Modern Daar El-Istiqomah</p>
+  <small>Menjaga amanah, membangun kepercayaan.</small>
+</footer>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="panel" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="x" id="m-close" aria-label="Tutup">×</button>
+    <div id="m-body"></div>
+  </div>
+</div>
+<div class="lightbox" id="lb" aria-hidden="true"><img alt=""><p></p></div>
+
+<script src="script.js"></script>
+</body>
+</html>
